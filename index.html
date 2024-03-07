@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="#inicio" class="active">Início</a>
+  <a href="#paciente">paciente</a>
+  <a href="#consulta">Consulta</a>
+  <a href="#medico">Médico</a>
+  <a href="#internacao">Internacao</a>
+  <a href="#materiais">Materiais</a>
+  <a href="#medicamentos">Medicamentos</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div id="inicio">
+
+</div> 
+<div id="paciente">
+    Cadastro de paciente
+    <h2>Cadastro de Paciente</h2>
+    <form action="processar_cadastro.php" method="POST">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="idade">Idade:</label><br>
+        <input type="number" id="idade" name="idade" required><br><br>
+        
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+        
+        <label for="endereco">Endereço:</label><br>
+        <textarea id="endereco" name="endereco" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+</div> 
+<div id="consulta">
+    Cadastro de consulta
+    <h2>Cadastro de Consultas</h2>
+    
+    <h3>Formulário de Cadastro</h3>
+    <form action="processar_cadastro_consulta.php" method="POST">
+        <label for="paciente">Paciente:</label><br>
+        <input type="text" id="paciente" name="paciente" required><br><br>
+        
+        <label for="medico">Médico:</label><br>
+        <input type="text" id="medico" name="medico" required><br><br>
+        
+        <label for="data">Data:</label><br>
+        <input type="date" id="data" name="data" required><br><br>
+        
+        <label for="hora">Hora:</label><br>
+        <input type="time" id="hora" name="hora" required><br><br>
+        
+        <input type="submit" value="Agendar Consulta">
+    </form>
+    
+    <hr>
+    
+    <h3>Consultas Agendadas</h3>
+    <ul>
+        <li>Consulta 1: Paciente A, Médico X, Data: 2024-03-10, Hora: 10:00</li>
+        <li>Consulta 2: Paciente B, Médico Y, Data: 2024-03-12, Hora: 14:30</li>
+        <!-- Adicione mais consultas conforme necessário -->
+    </ul>
+</div> 
+<div id="medico">
+    Cadastro de medico
+    <h2>Cadastro de Médico</h2>
+    <form action="processar_cadastro_medico.php" method="POST">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="especialidade">Especialidade:</label><br>
+        <input type="text" id="especialidade" name="especialidade" required><br><br>
+        
+        <label for="crm">CRM:</label><br>
+        <input type="text" id="crm" name="crm" required><br><br>
+        
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+        
+        <label for="endereco">Endereço:</label><br>
+        <textarea id="endereco" name="endereco" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+</div> 
+<div id="internacao">
+    Cadastro de internacao
+</div> 
+<div id="medicamento">
+    Cadastro de medicamento
+</div> 
+<div id="materiais">
+    Cadastro de materiais
+</div> 
+
+</body>
+</html>
